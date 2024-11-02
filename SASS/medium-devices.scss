@@ -1,0 +1,322 @@
+@import 'style.scss';
+
+// body {
+//     background-color: lightgreen;
+// }
+
+header {
+    & #head-icons {
+        width: $medium;
+        margin-left: calc((100% - $medium) / 2);
+        margin-right: calc((100% - $medium) / 2);
+    }
+}
+
+
+
+#projects-header-background {
+
+    & #projects-background-layer {
+        
+        & #layer-box {
+            width: $medium;
+            margin-left: calc((100% - $medium) / 2);
+            margin-right: calc((100% - $medium) / 2);
+            padding-left: 40px;
+        }
+    }
+}
+
+#sponsers-header-background {
+
+    & #sponsers-background-layer {
+        
+        & #title-layer {
+            width: $medium;
+            margin-left: calc((100% - $medium) / 2);
+            margin-right: calc((100% - $medium) / 2);
+            padding-left: 40px;
+        }
+    }
+}
+
+
+#intro-section {
+    height: 360px;
+    flex-direction: row;
+    width: $small;
+    margin-left: calc((100% - $small) / 2);
+    margin-right: calc((100% - $small) / 2);
+
+    & .advantage-block {
+        padding: 30px 5px;
+        height: 100%;
+
+        & h4 {
+            font-size: 0.7rem;
+            padding: 0px 0px;
+        }
+
+        & p {
+            margin: 0px 20px 30px;
+            padding: 0px;
+        }
+    }
+}
+
+#services-section {
+    margin-bottom: 70px;
+
+    #services-back {
+        top: 24.5%;
+        right: 8%;
+        height: 80%;
+        display: block;
+    }
+
+    #services-blocks {
+        height: 400px;
+        width: $medium;
+        margin-left: calc((100% - $medium) / 2);
+        margin-right: calc((100% - $medium) / 2);
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0px;
+        margin-top: 0px;
+        margin-bottom: 0px;
+        @include defineBackground("../IMAGES/Main Page Pics/sies-kranen-atxz4DIKJqQ-unsplash_5321x2993.jpg", 50%, 0%);
+
+        & .service-block {
+            width: 50%;
+            padding: 5px 10px;
+
+            & i {
+                color: $main-txt-color;
+            }
+
+            & p {
+                font-weight: 800;
+                color: $main-txt-color;
+                line-height: 1.6;
+            }
+        }
+
+        & #img-block {
+            display: none;
+        }
+    }
+}
+
+#portfolio-section {
+    
+    & #projects-blocks {
+        width: $small;
+        margin-left: calc((100% - $small) / 2);
+        margin-right: calc((100% - $small) / 2);
+        flex-direction: row;
+        margin-top: 40px;
+        margin-bottom: 20px;
+
+        & .project-block {
+            height: 300px;
+            width: 33%;
+            padding: 0px 10px;
+            margin-bottom: 10px;
+        }
+    }
+}
+
+
+#about-section {
+    margin-bottom: 40px;
+
+    #about-content {
+        width: $small;
+        margin-left: calc((100% - $small) / 2);
+        margin-right: calc((100% - $small) / 2);
+        height: 280px;
+        flex-direction: row;
+
+        & #image-side {
+            width: 51%;
+            padding-top: 30px;
+            margin-bottom: 20px;
+            position: relative;
+            z-index: 10;
+
+            & #image-back {
+                display: block;
+                position: absolute;
+                z-index: -1;
+                width: 50px;
+                height: 190px;
+                top: 0px;
+                right: -20px;
+                background-color: $sec-txt-color;
+            }
+
+            & #image-back::after {
+                content: '';
+                position: absolute;
+                height: 50px;
+                width: 100px;
+                bottom: 0px;
+                right: -40px;
+                background-color: $sec-txt-color;
+
+            }
+        }
+
+        & #text-side {
+            width: 44%;
+            height: 80%;
+            padding-top: 0px;
+            padding-left: 50px;
+        }
+    }
+
+    & #about-content::before {
+        width: 0px;
+    }
+    
+    & #about-content::after {
+        width: 0px;
+    }
+}
+
+.projects-page-content {
+    
+    & #sec-one {
+        height: 340px;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+
+        & #project-view {
+            margin-top: 25px;
+            padding-right: 40px;
+
+            & #intro {
+                line-height: 1.5;
+            }
+
+            & #notes {
+                font-size: 0.7rem;
+                line-height: 1.5;
+            }
+
+            & #notes::before {
+                top: -20px;
+            }
+        }
+
+        & #project-card {
+            width: 60%;
+            padding-left: 12px;
+        }
+    }
+
+    & #sec-two {
+        @extend %project-page;
+        margin-bottom: 50px;
+    }
+
+    & #sec-three,
+    & #sec-four {
+        @extend %project-page;
+
+        .meeting {
+            height: 250px;
+            margin-bottom: 30px;
+            flex-direction: row;
+            justify-content: center;
+
+            & .image-container {
+                width: 50%;
+            }
+
+            & p {
+                width: 50%;
+                margin-top: 0px;
+                padding: 0px 10px 0px 30px;
+                line-height: 1.4;
+                font: {
+                    size: 0.7rem;
+                    weight: 300;
+                }
+            }
+        }
+    }
+
+    & #sec-four {
+
+        & .meeting {
+            & .image-container {
+                order: 2;
+            }
+            & p {
+                order: 1;
+                padding: 0px 30px 0px 10px;
+            }
+        }
+    }
+}
+
+.sponsers-page-content {
+    margin-top: 60px;
+
+    & .sponser-block {
+        margin-bottom: 60px;
+
+        & h2 {
+            bottom: -9px;
+            right: 0px;
+            font-size: 3rem;
+        }
+    }
+}
+    
+%project-page {
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+#contact-section {
+    height: 440px;
+
+    & #contact-content {    
+        width: $large;
+        margin-left: calc((100% - $large) / 2);
+        margin-right: calc((100% - $large) / 2);
+
+        & h3 {
+            font-size: 1.7rem;
+        }
+        
+        & p:first-of-type {
+            margin-left: 35px;
+
+            & a {
+                font-size: 1.4rem;
+            }
+        }
+
+        & #social {
+            margin-left: 25px;
+
+            & p {
+                font-size: 0.70rem;
+            }
+        }
+    }
+}
+
+// %body-decoration {
+//     width: $extra-small;
+//     margin-left: calc((100% - $extra-small) / 2);
+//     margin-right: calc((100% - $extra-small) / 2);
+// }

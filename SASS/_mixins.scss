@@ -1,0 +1,5 @@
+//Background Mixins
+@mixin defineBackground($src, $left, $top) {
+    background: url($src) no-repeat $left $top scroll;
+    background-size: cover;
+}

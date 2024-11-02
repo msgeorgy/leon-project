@@ -1,0 +1,21 @@
+#main-menu-box
+ ul.main-menu
+  -let Menu = ['home', 'services', 'portfolio', 'about', 'Get in touch', 'contact', 'Check in details' ,'projects', 'sponsers', 'Get Socialized', 'facebook', 'discord', 'github']
+  -for (let m = 0; m <= 3; m++)
+   li
+    a(href=`main.html#${Menu[m]}-section` target='_self')=Menu[m]
+  -for (let m = 4; m < 5; m++)
+   li.title=Menu[m]
+  -for (let m = 5; m < 6; m++)
+   li
+    a(href=`main.html#${Menu[m]}-section` target='_self') #{Menu[m]} Us
+  -for (let m = 6; m < 7 ; m++)
+   li.title=Menu[m]
+  -for (let m = 7; m < 9; m++)
+    li
+     a(href=`${Menu[m]}.html` target='_self') #{Menu[m]}
+  -for (let m = 9; m < 10 ; m++)
+   li.title=Menu[m]
+  -for (let m = 10; m <= 12; m++) 
+   li
+    a(href=`https://${Menu[m]}/leon`)=Menu[m]

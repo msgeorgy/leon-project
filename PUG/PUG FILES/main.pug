@@ -1,0 +1,72 @@
+include ../MIXINS/advantages.pug
+include ../MIXINS/portfolio.pug
+include ../MIXINS/services.pug
+doctypehtml
+html(lang="en" dir="ltr")
+ head
+  title LEON 
+  meta(charset='utf-8')
+  meta(viewport='width=initial-width,initial-scale=1.0')
+  meta(name='author' content='msgeorgy')
+  meta(name='keywords' content='pug, sass, html5, css3, js, json, ajax, github, gulpjs')
+  //-Fonts
+  link(rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900&display=swap")
+  //-Icons
+  link(rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons")
+  link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css")
+  //-Links
+  link(rel="stylesheet" href="../CSS/extra-small-devices.css" media="(max-width: 600px)")
+  link(rel="stylesheet" href="../CSS/small-devices.css" media="(min-width: 600px) and (max-width: 767px)")
+  link(rel="stylesheet" href="../CSS/medium-devices.css" media="(min-width: 768px) and (max-width: 991px)")
+  link(rel="stylesheet" href="../CSS/large-devices.css" media="(min-width: 992px) and (max-width: 1199px)")
+  link(rel="stylesheet" href="../CSS/extra-large-devices.css" media="(min-width: 1200px) and (max-width: 1600px)")
+ body
+  include ../INCLUDES/inc-header.pug
+  block pageHeader
+   #main-header-background
+    #main-background-layer
+     h1 Hello There!
+     h4 We are Leon - Super Creative & Minimal.
+     h4 Agency Web Template
+  block pageBody
+   #intro-section
+    +advantage(div, 'fa fa-diamond', 'tell us your idea', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima deleniti, unde suscipit nesciunt blanditiis natus.')
+    +advantage(div, 'fa fa-flask', 'we will do all the work', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae rerum sequi mollitia eius corporis dolorum.')
+    +advantage(div, 'fa fa-globe', 'your product is worldwide', 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illo quos, atque provident soluta dicta accusamus!')
+   #services-section
+    #services-section-header
+     h2 services
+     h5 Don't be busy. be productive
+    #services-back
+    #services-blocks 
+     +service(div, 'local_printshop', 'graphic design', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus, voluptates perferendis molestias natus expedita tempore.')
+     +service(div, 'web', 'web design', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur eius, placeat explicabo quia ut accusantium.')
+     +service(div, 'rate_review', 'UI & UX', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum dignissimos vel numquam beatae debitis placeat.')
+     +service(div, 'desktop_windows', 'web development', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla voluptates dolorum commodi delectus doloremque ut?')
+     #img-block
+      #img-window
+       img(src="../IMAGES/Main Page Pics/nicola-fittipaldi-DDfPsDTmkVc-unsplash_3268x4740.jpg" alt="mountain")
+      #img-block-back
+   #portfolio-section
+    #portfolio-section-header
+     h2 portfolio
+     h5 If you do it right, it will last forever
+    #projects-blocks 
+     +project(div, 'designecologist-JgU9niNBOgQ-unsplash_3843x2561', 'Artica', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique, tenetur?')
+     +project(div, 'farrel-nobel-BhLFK8lHvUs-unsplash_4353x2721', 'Kit', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, eaque.')
+     +project(div, 'igor-miske-JVSgcV8_vb4-unsplash_5626x3393', 'Momentio', 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatem, quo.')
+   #about-section
+    #about-section-header
+     h2 about
+     h5 Less is more work
+    #about-content 
+     #image-side
+      #image-back
+      img(src="../IMAGES/Main Page Pics/pineapple-supply-co-SRKxB1B_sn4-unsplash_6000x4000.jpg" alt="about-image") 
+     #text-side 
+      p#about-intro Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sint dicta similique minima eius impedit nam consectetur in quisquam, dolore inventore quaerat hic sunt, accusamus veritatis?
+      p#about-notes Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eaque tempore quam minima dignissimos quisquam quidem atque magnam corrupti ex iusto?
+  include ../INCLUDES/inc-contact.pug
+  include ../INCLUDES/inc-footer.pug
+  script(src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous")
+  script(src="../JS/main-menu.js")

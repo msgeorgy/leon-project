@@ -1,0 +1,29 @@
+@import 'style.scss';
+
+// body {
+//     background-color: pink;
+// }
+
+header {
+    & #head-icons {
+        width: $small;
+        margin-left: calc((100% - $small) / 2);
+        margin-right: calc((100% - $small) / 2);
+    }
+}
+
+#projects-header-background {
+
+    & #projects-background-layer {
+        
+        & #layer-box {
+            width: $small;
+            margin-left: calc((100% - $small) / 2);
+            margin-right: calc((100% - $small) / 2);
+
+            & h1 {
+                font-size: 1.5rem;
+            }
+        }
+    }
+}

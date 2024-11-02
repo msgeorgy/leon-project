@@ -1,0 +1,17 @@
+extends main.pug
+include ../MIXINS/sponsers-data.pug
+block pageHeader
+ #sponsers-header-background
+  #sponsers-background-layer
+   #title-layer 
+    h5 find help 
+    h1 meet your guidance
+
+block pageBody
+ .sponsers-page-content
+  +sponser-hint(div, "fatemeh-rezvani-MnPWB-ybjHQ-unsplash_6240x4160", 'knowledge is fuel')
+  +sponser-hint(div, "musemind-ux-agency-9tn3JFeAc08-unsplash_6000x4000", 'one requires many')
+  +sponser-hint(div, "mina-rad--P7kHROe-6A-unsplash_4788x3300",'feel confident')
+  +sponser-hint(div, "mina-rad-qFSQFSmfZkA-unsplash_5766x3843", 'to look confident')
+  +sponser-hint(div, "nick-fewings-xiV8pkhUx6M-unsplash_3032x2020",  'forges alliences')
+  +sponser-hint(div, "tara-mae-miller-vkqY-7ZiGS4-unsplash_3130x2075", 'healthy life easy life')

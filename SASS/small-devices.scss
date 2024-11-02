@@ -1,0 +1,178 @@
+@import 'style.scss';
+
+// body {
+//     background-color: lightblue;
+// }
+
+header {
+    & #head-icons {
+        width: $large;
+        margin-left: calc((100% - $large) / 2);
+        margin-right: calc((100% - $large) / 2);
+    }
+}
+
+#projects-header-background {
+
+    & #projects-background-layer {
+        
+        & #layer-box {
+            width: $small;
+            margin-left: calc((100% - $small) / 2);
+            margin-right: calc((100% - $small) / 2);
+            padding-left: 30px;
+
+            & h1 {
+                text-align: left;
+                font-size: 1.8rem;
+            }
+        }
+    }
+}
+
+#sponsers-header-background {
+
+    & #sponsers-background-layer {
+        
+        & #title-layer {
+            width: $small;
+            margin-left: calc((100% - $small) / 2);
+            margin-right: calc((100% - $small) / 2);
+            padding-left: 30px;
+
+            & h1 {
+                text-align: left;
+                font-size: 1.8rem;
+            }
+
+        }
+    }
+}
+
+#intro-section {
+
+    & .advantage-block {
+        padding: 30px 60px;
+        height: 100%;
+
+        & p {
+            padding: 0px;
+        }
+    }
+}
+
+#services-section {
+
+    #services-back {
+        right: 15%;
+        display: block;
+    }
+
+    #services-blocks {
+        height: 900px;
+        @extend %body-decoration;
+
+        & .service-block {
+            padding: 5px 30px 5px 70px;
+        }
+        
+        & #img-block {
+            display: none;
+        }
+    }
+}
+
+#portfolio-section {
+
+    & #projects-blocks {
+        margin-top: 40px;
+        margin-bottom: 20px;
+
+        & .project-block {
+            height: 340px;
+            margin-bottom: 60px;
+        }
+    }
+}
+
+#about-section {
+
+    #about-content {
+        height: 470px;
+
+        & #image-side {
+            margin-bottom: 20px;
+        }
+    }
+}
+
+.projects-page-content {
+    
+    & #sec-three,
+    & #sec-four {
+        @extend %project-page;
+
+        .meeting {
+            height: 460px;
+            margin-bottom: 30px;
+        }
+    }
+}
+
+.sponsers-page-content {
+    margin-top: 60px;
+
+    & .sponser-block {
+        margin-bottom: 60px;
+
+        & h2 {
+            bottom: -5px;
+            right: 0px;
+            font-size: 2.2rem;
+        }
+    }
+}
+    
+%project-page {
+    width: 70%;
+    margin-left: 15%;
+    margin-right: 15%;
+}
+
+#contact-section {
+    height: 440px;
+
+    & #contact-content {    
+        width: $large;
+        margin-left: calc((100% - $large) / 2);
+        margin-right: calc((100% - $large) / 2);
+
+        & h3 {
+            font-size: 1.5rem;
+        }
+        
+        & p:first-of-type {
+            margin-left: 30px;
+
+            & a {
+                font-size: 1.3rem;
+            }
+        }
+
+        & #social {
+            margin-left: 20px;
+
+            & p {
+                font-size: 0.65rem;
+            }
+        }
+    }
+}
+
+////////////////////////////////////////////////////////////////////////////////////////
+
+%body-decoration {
+    width: $extra-large;
+    margin-left: calc((100% - $extra-large) / 2);
+    margin-right: calc((100% - $extra-large) / 2);
+}

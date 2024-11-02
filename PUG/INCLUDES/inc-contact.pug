@@ -1,0 +1,16 @@
+#contact-section
+ #contact-section-header
+  h2 contact
+  h5 We are born to create
+ #contact-content
+  h3 Feel free to drop us a line at:
+  p 
+   a(href="#" target="_self") leonagency@mail.com
+  #social 
+   p Find us on social networks:
+   ul
+    -let media = ['facebook', 'twitter', 'pinterest', 'google-plus']
+    each m in media
+     li
+      a(href="#" target="_self")
+       i.fa(class=`fa-${m}`)
