@@ -1,0 +1,11 @@
+HTML/
+CSS/
+JS/
+PUG/
+SASS/
+IMAGES/
+node_modules/
+req.txt
+package.json
+package-lock.json
+gulpFile.js
